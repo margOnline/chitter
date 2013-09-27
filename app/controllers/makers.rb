@@ -1,28 +1,24 @@
-class Maker < Sinatra::Base
+class Makers < ChitterApp
 
-  get '/users/new' do
-    haml :"sessions/new"
+  get '/makers/new' do
+    @maker = Maker.new
+    haml :"makers/new"
   end
 
-  post '/sessions' do
-    name = [:name]
-    username = params[:username] 
-    email = params[:email]
-    password = params[:name]
-    if maker
-      session[:maker_id] = maker.id
+  post '/makers' do
+    @maker = maker.create(
+                :first_name => params[:first_name],
+                :last_name => params[:last_name],
+                :email => params[:email],
+                :username => params[:username],
+                :password => params[:password],
+                :password_confirmation => params[:password_confirmation])
+    if @maker.save
+      session[:maker_id] = @maker.id
       redirect to('/')
     else
-      flash[:errors] = ['The email or password are not correct']
-      haml :"/sessions/new"
+      flash.now[:errors] = @maker.errors.full_messages
+      haml :"makers/new"
     end
   end
-
-  delete '/sessions' do
-    flash[:notice] = "Good bye - we hope to see you again soon!"
-    session[:maker_id] = nil
-    redirect to('/')
-  end
-
-
 end

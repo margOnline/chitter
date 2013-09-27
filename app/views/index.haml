@@ -1,0 +1,5 @@
+#peeps-container
+  PEEPS
+  %ul{id: 'peeps'}
+  - @peeps.each do |peep|
+    = partial :peep, locals: {peep: peep }

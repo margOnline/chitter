@@ -6,7 +6,8 @@ class Maker
   has n, :peeps
 
   property :id, Serial
-  property :name, String
+  property :first_name, String
+  property :last_name, String
   property :email, String, :unique => true, :message => "This email address has already been registered"
   property :username, String, :unique => true, :message => "This username is taken, please choose another one"
   property :password_digest, Text

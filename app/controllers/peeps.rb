@@ -1,4 +1,4 @@
-class Peeps < Sinatra::Base
+class Peeps < ChitterApp
   
   get '/peeps/new' do
     haml :"peeps/new"
