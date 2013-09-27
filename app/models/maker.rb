@@ -23,7 +23,7 @@ class Maker
   end
 
   def self.authenticate(email, password)
-    maker = first(:email =>)
+    maker = first(:email => email)
     if maker && BCrypt::Password.new(maker.password_digest) == password
       maker
     else

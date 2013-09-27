@@ -2,7 +2,7 @@
 
 ENV['RACK_ENV'] = 'test'
 
-require File.join(File.dirname(__FILE__), '..', '..', 'chitter_app.rb')
+require File.join(File.dirname(__FILE__), '..', '..', 'app/chitter_app.rb')
 
 require 'capybara'
 require 'capybara/cucumber'
