@@ -3,6 +3,8 @@ require 'bcrypt'
 class Maker
   include DataMapper::Resource
 
+  has n, :peeps
+
   property :id, Serial
   property :name, String
   property :email, String, :unique => true, :message => "This email address has already been registered"
@@ -13,8 +15,7 @@ class Maker
   attr_accessor :password_confirmation
 
   validates_confirmation_of :password, :message => "The passwords you entered do not match, please try again"
-  validates_uniqueness_of :email
-  validates_uniqueness_of :username
+  validates_uniqueness_of :email, :username
 
   def password=(password)
     @password = password
