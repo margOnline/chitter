@@ -6,6 +6,9 @@ require 'sinatra/partial'
 
 ######### MODELS / CONTROLLERS #########
 
+require_relative 'models/maker'
+require_relative 'models/peep'
+require_relative './data_mapper_setup'
 
 class Chitter < Sinatra::Base
  
