@@ -3,10 +3,10 @@
     %h1
       %a{href: "/"}
         %img{src: 'images/super-bird.jpeg'}
-        Chitter
+        Super Chitter
 
   #peeps
-  - if current_user 
+  - if maker_signed_in
     %span{id: 'welcome-message'}
       Welcome, #{current_user.email}
     %form{id: "sign-out", method: "post", action: "/sessions"}

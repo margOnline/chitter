@@ -2,21 +2,21 @@
 %form{:action => "/makers", :method => "post"}
   %p
     First Name:
-    %input{type: 'text', name: => 'first_name', value: @maker.first_name}
+    %input{type: 'text', name: 'first_name', value: @maker.first_name}
   %p
     Last Name:
-    %input{type: 'text', name: => 'last_name', value: @maker.last_name}
+    %input{type: 'text', name: 'last_name', value: @maker.last_name}
   %p
     Email:
     %input{type: "email", name: "email", value: @maker.email}
   %p
     Username:
-    %input{type: 'text', name: 'username' value: @maker.username}
+    %input{type: 'text', name: 'username', value: @maker.username}
   %p
     Password:
-    %input{:type => "password", :name => "password"}
+    %input{type: "password", name: "password"}
   %p
     Confirm password:
-    %input{:type => "password", :name => "password_confirmation"}
+    %input{type: "password", name: "password_confirmation"}
   %p
-    %input{:type => "submit", :class => 'button', :value => "Sign up"}
+    %input{type: "submit", class: 'button', value: "Sign up"}
