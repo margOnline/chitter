@@ -1,0 +1,152 @@
+*{
+  box-sizing:border-box;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  font-style: italic;
+  }
+
+html, body{
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica, Arial, Sans-serif;
+  color:#666;
+}
+
+.wrapper{
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+/*  width:60%;
+*/  margin: 0 auto -5em;
+}
+header {
+  height: 40px;
+  background-color: black;
+  display: flex;
+  padding:0 20px;
+  color:white;
+}
+
+header > * {
+  margin: auto 0;
+}
+
+header #logo {
+  display: flex;
+  margin-right: 20px;
+}
+header a {
+ /* color: white;*/
+}
+
+header #logo a{
+  color:#3EC9F3;
+}
+header #logo img{
+  margin-top: 30px;
+}
+
+header #maker-links {
+  flex: 1; /* http://learnlayout.com/flexbox.html */
+  -webkit-flex: 1;
+  text-align: right;  
+}
+
+header #maker-links > * {
+  display: inline-block;
+}
+
+header #maker-links #welcome-message {
+  font-size: 14px;
+}
+
+#peeps-container{
+  background-color: white;
+  margin: 140px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  padding:10px;
+}
+
+.peep {
+  background-color: #EEE;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  margin:10px inherit;
+  padding: 15px 10px;
+  list-style: none;
+}
+
+.peep .post{
+  font-size: 14px;
+}
+.peep .source{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.peep .created{
+  float:right;
+  color:#999;
+}
+
+footer{
+  display:flex;
+  background-color: rgba(0,0,0,0.2);
+}
+footer a {
+  color:#005580;
+}
+
+footer > * {
+  margin: auto inherit;
+}
+
+footer img {
+  vertical-align: top;
+}
+
+footer #technologies {
+  margin-top: 20px;
+  -webkit-flex: 1;
+  flex:1;
+}
+footer p{
+  padding: 5px 25px;
+}
+
+footer, .push{
+  height: 5em;
+}
+
+footer #copyright{
+  margin-top: -20px;
+  float:right;
+  padding-right: 40px;
+}
+.button {
+  display:inline-block;
+  width:110px;
+  background-color: #f6d036;
+  cursor: pointer;
+  font-size: 16px;
+  border: 2px solid white;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 4px;
+  margin-left:5px;
+  margin-right: 5px;
+  text-shadow: 0 0 2px rgba(0,0,0,0.4);
+}
+#notice{
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(67,183,120,0.75);
+  border-radius:4px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.4);
+  color:white;
+}

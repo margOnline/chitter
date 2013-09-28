@@ -1,5 +1,5 @@
 class ChitterApp < Sinatra::Base
-  helpers MakerHelpers
+  helpers ChitterHelpers
 
   enable :sessions
   set :session_secret, 'super secret session'

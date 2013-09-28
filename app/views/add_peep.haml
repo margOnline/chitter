@@ -1,0 +1,6 @@
+%h1 Enter a Peep!
+%form{:action => "/peeps", :method => "post"}
+  %p
+    %textarea{name: 'post', cols: '40', rows: '2'}
+  %p
+    %input{type: "submit", class: 'button', value: "Add peep!"}

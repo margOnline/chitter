@@ -5,16 +5,17 @@
         %img{src: 'images/super-bird.jpeg'}
         Super Chitter
 
-  #peeps
-  - if maker_signed_in
-    %span{id: 'welcome-message'}
-      Welcome, #{current_user.email}
-    %form{id: "sign-out", method: "post", action: "/sessions"}
-      %input{type: "hidden", name: "_method", value: "delete"}
-      %input{type: "submit", value: "Sign out"}
+  #maker-links
+    - if maker_signed_in 
+      %span{id: 'welcome-message'}
+        Welcome, #{maker_signed_in.email}
+      %form{id: "sign-out", method: "post", action: "/sessions"}
+        %input{type: "hidden", name: "_method", value: "delete"}
+        %input{type: "submit", value: "Sign out"}
+      = partial :add_peep
 
-  - else
-    %a{href: '/makers/new', id: 'sign-up', class: 'button'}
-      Sign up
-    %a{href: '/sessions/new', id: 'sign-in', class: 'button'}
-      Sign in
+    - else
+      %a{href: '/makers/new', id: 'sign-up', class: 'button'}
+        Sign up
+      %a{href: '/sessions/new', id: 'sign-in', class: 'button'}
+        Sign in
