@@ -23,6 +23,8 @@ body {
 /*  width:60%;
 */  margin: 0 auto -5em;
 }
+
+/* ************* HEADER ************* */
 header {
   height: 40px;
   background-color: black;
@@ -42,12 +44,17 @@ header #logo {
 header a {
  /* color: white;*/
 }
+header #logo h1 {
+  margin-top: 60px;
+  margin-left: -20px;
+  color:#3EC9F3;
+}
 
 header #logo a{
   color:#3EC9F3;
 }
 header #logo img{
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 header #maker-links {
@@ -63,7 +70,7 @@ header #maker-links > * {
 header #maker-links #welcome-message {
   font-size: 14px;
 }
-
+/* ************* PEEPS LIST ************* */
 #peeps-container{
   background-color: white;
   margin: 140px;
@@ -91,7 +98,13 @@ header #maker-links #welcome-message {
   float:right;
   color:#999;
 }
+/* ************* SIGN IN / UP FORMS ************* */
+.form-wrap{
+  width:40%;
+  margin:80px auto;
+}
 
+/* ************* FOOTER ************* */
 footer{
   display:flex;
   background-color: rgba(0,0,0,0.2);
