@@ -5,9 +5,6 @@ class Maker
 
   has n, :peeps
 
-  attr_reader :password
-  attr_accessor :password_confirmation
-
   property :id, Serial
   property :first_name, String
   property :last_name, String
@@ -15,6 +12,9 @@ class Maker
   property :username, String, :unique => true, :message => "This username is taken, please choose another one"
   property :password_digest, Text
 
+  attr_reader :password
+  attr_accessor :password_confirmation
+  
   validates_confirmation_of :password, :message => "The passwords you entered do not match, please try again"
   validates_uniqueness_of :email
   validates_uniqueness_of :username

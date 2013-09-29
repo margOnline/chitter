@@ -6,10 +6,10 @@ class Peeps < ChitterApp
   
   post '/peeps' do
     post = params["post"]
-    created = Time.new
+    created_at = Time.new
     maker_id = session[:maker_id]
     
-    Peep.create(:post => post, :created => created, :maker_id => maker_id)
+    Peep.create(:post => post, :created_at => created_at, :maker_id => maker_id)
     redirect to('/')
   end
 end

@@ -104,6 +104,20 @@ header #maker-links #welcome-message {
   margin:80px auto;
 }
 
+.error_msgs {
+  margin-top:60px;
+  margin-left:120px;
+}
+
+#errors{
+  list-style: none;
+  margin-left: 30px;
+}
+
+.text-error{
+  color: #b94a48;
+}
+
 /* ************* FOOTER ************* */
 footer{
   display:flex;

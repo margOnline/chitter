@@ -2,7 +2,6 @@
 
   %ul{id: 'peeps'}
   - @peeps.each do |peep|
-    / @peep_maker = get_details_of peep.maker_id
-    
-    / = partial :list_peeps, locals: {peep: peep, peep_maker: peep_maker }
-    = partial :list_peeps, locals: {peep: peep}
+    - peep_maker = get_details_of peep.maker_id
+    / =partial :list_peeps, locals: {peep: peep, peep_maker: peep_maker}
+    =partial :list_peeps, locals: {peep: peep}
