@@ -1,7 +1,10 @@
-Please sign in
-%form{method: 'post', action: '/sessions'}
-  Email:
-  %input{type: 'email', name: 'email'}
-  Password:
-  %input{type: 'password', name: 'password'}
-  %input{type: "submit", class: "button", value: "Sign in"}
+.form-wrap
+  %h4 Sign in to start peeping
+  %form{method: 'post', action: '/sessions'}
+    Email:
+    %input{type: 'email', name: 'email'}
+    %p
+      Password:
+      %input{type: 'password', name: 'password'}
+    %p
+      %input{type: "submit", class: "button", value: "Sign in"}
