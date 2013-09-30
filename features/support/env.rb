@@ -26,6 +26,18 @@ class ChitterWorld
   include RSpec::Matchers
 end
 
+Before('@sign_in_out') do 
+  User.create(:first_name => 'Margo',
+      :last_name => 'Urey',
+      :username => 'margOnline',
+      :email => 'margo@margonline.co.uk', 
+      :password => 'secret!')
+end
+
 World do
   ChitterWorld.new
+end
+
+After do |scenario|
+  DatabaseCleaner.clean
 end

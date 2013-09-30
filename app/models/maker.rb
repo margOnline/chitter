@@ -3,8 +3,6 @@ require 'bcrypt'
 class Maker
   include DataMapper::Resource
 
-  has n, :peeps
-
   property :id, Serial
   property :first_name, String
   property :last_name, String
@@ -12,12 +10,14 @@ class Maker
   property :username, String, :unique => true, :message => "This username is taken, please choose another one"
   property :password_digest, Text
 
+  has n, :peep
+  
   attr_reader :password
   attr_accessor :password_confirmation
   
   validates_confirmation_of :password, :message => "The passwords you entered do not match, please try again"
-  validates_uniqueness_of :email
-  validates_uniqueness_of :username
+  validates_uniqueness_of :email, :username
+  validates_presence_of :username, :email, :first_name, :last_name
 
   def password=(password)
     @password = password

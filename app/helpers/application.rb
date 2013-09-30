@@ -5,7 +5,7 @@ module ChitterHelpers
   end
 
   def get_details_of peep_maker
-    @peep_maker = Maker.first{id: peep_maker}
+    @peep_maker = Maker.get(peep_maker)
   end
 
 end

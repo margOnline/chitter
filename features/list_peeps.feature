@@ -1,11 +1,11 @@
 Feature: List peeps
   Upon visiting the home page
-  The user should see all peeps regardless of whether they have signed in or not
+  The visitor should see all peeps regardless of whether they have signed in or not
 
   Scenario Outline: when peeps have been peeped
-    Given there are peeps that have "<text>" written by "<first_name>", "<last_name>" with the username "<username>"
+    Given there are peeps that have "<post>" written by "<first_name>", "<last_name>" with the username "<username>"
     When a visitor visits the home page
-    Then all "<text>" should be displayed
+    Then all "<post>" should be displayed
     And the "<first_name>" should be displayed
     And the "<last_name>" should be displayed
     And the "<username>" should be displayed next to the name

@@ -10,22 +10,13 @@ Then(/^the "(.*?)" should be displayed$/) do |post|
   expect(page).to have_content(post)
 end
 
-Then(/^the "(.*?)" should be displayed next to the name$/) do |username|
-  expect(page).to have_content(username)
+Then(/^the "(.*?)" should be displayed$/) do |created_at|
+  expect(page).to have_content(created_at)
 end
 
-Given(/^that a peep has been created$/) do
-  Peep.create(post: post, created_at: '2013:00:00:00', maker_id: maker_id)
-  expect(Peep.first(username:)).to be_an_instance_of Peep
-# visit('/')
-end
 
 
 Then(/^the post should match "(.*?)"$/) do |post|
   visit('/')
   expect(page).to have_content(post)
-end
-
-Then(/^the username should match "(.*?)"$/) do |username|
-  pending # express the regexp above with the code you wish you had
 end

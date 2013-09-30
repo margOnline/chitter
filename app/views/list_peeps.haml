@@ -1,10 +1,9 @@
 %li{class: 'peep'}
 
   %span{class: 'source'}
-    First name, Last name, Username
-    / - peep_maker.first_name 
-    / - peep_maker.last_name 
-    / - peep_maker.username
+    = peep_maker.first_name 
+    = peep_maker.last_name 
+    = peep_maker.username
   %span{class: 'created'}
     = peep.created_at.strftime('%e %b %R')
   %p{class: 'post'}

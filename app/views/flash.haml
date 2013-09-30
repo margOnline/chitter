@@ -2,7 +2,7 @@
   #notice=flash[:notice]
 
 -if flash[:errors] && !flash[:errors].empty?
-  %p{class: 'lead'}
+  %p{class: 'error_msgs'}
     Sorry, there were the following problems with your form.
     %ul{id: 'errors'}
       -flash[:errors].each do |error|

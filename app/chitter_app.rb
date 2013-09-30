@@ -5,9 +5,9 @@ require 'rack-flash'
 require 'sinatra/partial'
 
 ######### MODELS / CONTROLLERS #########
-require_relative 'data_mapper_setup'
 require_relative 'models/maker'
 require_relative 'models/peep'
+require_relative 'data_mapper_setup'
 require_relative 'helpers/application'
 
 require_relative 'controllers/base'
