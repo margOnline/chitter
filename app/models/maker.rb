@@ -6,8 +6,8 @@ class Maker
   property :id, Serial
   property :first_name, String
   property :last_name, String
-  property :email, String, :unique => true, :message => "This email address has already been registered"
-  property :username, String, :unique => true, :message => "This username is taken, please choose another one"
+  property :email, String 
+  property :username, String 
   property :password_digest, Text
 
   has n, :peep
@@ -16,7 +16,8 @@ class Maker
   attr_accessor :password_confirmation
   
   validates_confirmation_of :password, :message => "The passwords you entered do not match, please try again"
-  validates_uniqueness_of :email, :username
+  validates_uniqueness_of :email, :message => "This email address has already been registered"
+  validates_uniqueness_of :username, :message => "This username is taken, please choose another one"
   validates_presence_of :username, :email, :first_name, :last_name
 
   def password=(password)

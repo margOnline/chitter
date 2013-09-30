@@ -10,8 +10,7 @@
         Welcome, #{maker_signed_in.email}
       %form{id: "sign-out", method: "post", action: "/sessions"}
         %input{type: "hidden", name: "_method", value: "delete"}
-        %input{type: "submit", value: "Sign out"}
-      = partial :add_peep
+        %input{type: "submit", class: 'button sign-out',value: "Sign out"}
 
     - else
       %a{href: '/makers/new', id: 'sign-up', class: 'button'}
