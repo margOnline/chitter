@@ -12,6 +12,6 @@ class Peep
 
   belongs_to :maker
 
-  validates_length_of :post, :max => 140, :message => 'Peeps can not be more than 140 characters'
+  validates_length_of :post, :max => 140, :message => 'Peeps can not be more than 140'
   validates_presence_of :post, :message => 'Please enter a peep'
 end

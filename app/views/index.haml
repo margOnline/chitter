@@ -3,5 +3,4 @@
     = partial :add_peep
   %ul{id: 'peeps'}
   - @peeps.each do |peep|
-    - @peep_maker = peep.maker
-    =partial :list_peeps, locals: {peep: peep, peep_maker: @peep_maker}
+    = partial :list_peeps, locals: {peep: peep, peep_maker: peep.maker}

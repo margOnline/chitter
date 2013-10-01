@@ -7,7 +7,7 @@
   #maker-links
     - if maker_signed_in 
       %span{id: 'welcome-message'}
-        Welcome, #{maker_signed_in.email}
+        Welcome, #{maker_signed_in.username}
       %form{id: "sign-out", method: "post", action: "/sessions"}
         %input{type: "hidden", name: "_method", value: "delete"}
         %input{type: "submit", class: 'button sign-out',value: "Sign out"}

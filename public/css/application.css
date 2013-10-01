@@ -74,13 +74,9 @@ header #maker-links #welcome-message {
 }
 /* ************* PEEPS LIST ************* */
 #add_peep{
-/*  clear: both;*/
-  width:27%;
-  margin: 15px auto 30px;
+  margin: 15px 25%;
 }
-#add_peep h4{
-  text-align: center;
-}
+
 /* ************* PEEPS LIST ************* */
 #peeps-container{
   background-color: white;
@@ -108,9 +104,6 @@ header #maker-links #welcome-message {
   color:#999;
 }
 /* ************* SIGN IN / UP FORMS ************* */
-/*.sign-out{
-  position: absolute;
-}*/
 .form-wrap{
   width:40%;
   margin:80px auto;
