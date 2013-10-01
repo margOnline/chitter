@@ -5,16 +5,15 @@ require 'rack-flash'
 require 'sinatra/partial'
 
 ######### MODELS / CONTROLLERS #########
-require_relative 'models/maker'
-require_relative 'models/peep'
-require_relative 'data_mapper_setup'
-require_relative 'helpers/application'
-
-require_relative 'controllers/base'
-require_relative 'controllers/home'
-require_relative 'controllers/sessions'
-require_relative 'controllers/peeps'
-require_relative 'controllers/makers'
+require './app/models/maker'
+require './app/models/peep'
+require './app/data_mapper_setup'
+require './app/helpers/application'
+require './app/controllers/base'
+require './app/controllers/home'
+require './app/controllers/sessions'
+require './app/controllers/peeps'
+require './app/controllers/makers'
 #######################################
 
 class Chitter < Sinatra::Base
