@@ -3,33 +3,17 @@ function handlePeepSubmit(){
   var data = {
     "post": form.find('#post').val()
   };
-  $.post('/peeps', data, postSuccess);
+  $.post('/peeps', data, function(){});
   return false;
 }
-
-// function postPeep(data){
-//   , function(data){
-//     console.log(data);
-//   });
-// }
 
 function postSuccess(data,textStatus, jqXHR){
   $('#peeps').prepend(data);
 }
 
-//   // $('#add-peep-form').get(0).reset();
-//   // displayPeep(data);
-// }
+var pusher = new Pusher('64f9dd5db97a8ce00355');
+var channel = pusher.subscribe('peeps');
+channel.bind('peep-posted', function(data) {
+  $('#peeps').prepend("<li>"+data.peep+"</li>"); 
+});
 
-// function displayPeep(){
-//   var peepHtml = createPeep(data);
-//   var peepElement = $(peepHtml);
-// }
-
-// function createPeep(data){
-//   // var html = '' + '<li class="peep"><span class="source">' + ;
-// }
-
-// function postError(jqXHR,textStatus,errorThrown){
-//   console.log('error posting peep');
-// }

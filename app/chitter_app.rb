@@ -3,6 +3,7 @@ require 'data_mapper'
 require 'haml'
 require 'rack-flash'
 require 'sinatra/partial'
+require './pusher_config'
 
 ######### MODELS / CONTROLLERS #########
 require './app/models/maker'
@@ -27,6 +28,10 @@ class Chitter < Sinatra::Base
   set :partial_template_engine, :haml
 
 ######### DEFINE ROUTE PATHS #########
+
+  before do
+    @pusher_key = APP_KEY
+  end
   
   get('/') {Home.call(env)}
   get('/sessions/new') {Sessions.call(env)}
