@@ -1,5 +1,6 @@
 *{
   box-sizing:border-box;
+  margin:0;
 }
 
 a:hover, a:active {
@@ -8,7 +9,7 @@ a:hover, a:active {
   }
 
 html, body{
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -20,8 +21,7 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-/*  width:60%;
-*/  margin: 0 auto -5em;
+  margin: 0 auto -5em;
 }
 
 /* ************* HEADER ************* */
@@ -98,6 +98,10 @@ header #maker-links #welcome-message {
 .peep .source{
   font-size: 16px;
   font-weight: bold;
+}
+.peep .username{
+  font-size: 12px;
+  color:;
 }
 .peep .created{
   float:right;

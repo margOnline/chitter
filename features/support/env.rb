@@ -1,4 +1,5 @@
 ENV['RACK_ENV'] = 'test'
+ENV['DATABASE_URL']= "postgres://localhost/chitter_test"
 
 require File.join(File.dirname(__FILE__), '..', '..', './app/chitter_app.rb')
 

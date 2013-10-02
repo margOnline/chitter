@@ -17,7 +17,7 @@ class Sessions < ChitterApp
   end
 
   delete '/sessions' do
-    flash[:notice] = "Thanks for peeping, fly back soon!"
+    flash[:notice] = "Thanks for cheeping, fly back soon!"
     session[:maker_id] = nil
     redirect to('/')
   end
