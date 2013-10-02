@@ -2,5 +2,5 @@
   - if maker_signed_in 
     = partial :add_peep
   %ul{id: 'peeps'}
-  - @peeps.each do |peep|
-    = partial :list_peeps, locals: {peep: peep, peep_maker: peep.maker}
+    - @peeps.each do |peep|
+      = partial :list_peeps, locals: {peep: peep, peep_maker: peep.maker}

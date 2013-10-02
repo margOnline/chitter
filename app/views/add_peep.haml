@@ -1,9 +1,9 @@
 #add_peep
-  %form{action: "/peeps", name: "add_peep", method: "post"}
+  %form{action: "/peeps", id: "add-peep-form",name: "add-peep-form", method: "post"}
     %textarea{name: 'post', id: 'post', placeholder: 'no more than 140 characters', cols: '70', rows: '2'}
     %input{type: "submit", class: 'button', value: "Peep!"}
-
-%script
-  - $(function(){
-      $('add_peep').submit(handlePeepSubmit);
-    })
+    
+:javascript
+  $(function(){
+    $('#add-peep-form').submit(handlePeepSubmit);
+  })
