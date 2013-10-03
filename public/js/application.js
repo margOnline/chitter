@@ -16,7 +16,7 @@ function clearForm(){
   $('#post').val('');
 }
 
-var pusher = new Pusher(:api_key);
+var pusher = new Pusher(Pusher.app_id);
 var channel = pusher.subscribe('peeps');
 channel.bind('add-peep', function(peep) {
   $('#peeps').prepend("<li class='peep'><span class='source'>" + 
