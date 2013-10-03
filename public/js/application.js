@@ -13,7 +13,7 @@ function postSuccess(data,textStatus, jqXHR){
 
 var pusher = new Pusher('64f9dd5db97a8ce00355');
 var channel = pusher.subscribe('peeps');
-channel.bind('peep-posted', function(data) {
-  $('#peeps').prepend("<li>"+data.peep+"</li>"); 
+channel.bind('add-peep', function(peep) {
+  $('#peeps').prepend("<li class='peep'>"+peep.post+"</li>"); 
 });
 

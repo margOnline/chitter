@@ -4,6 +4,7 @@ require 'haml'
 require 'rack-flash'
 require 'sinatra/partial'
 require './pusher_config'
+require 'pusher'
 
 ######### MODELS / CONTROLLERS #########
 require './app/models/maker'

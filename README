@@ -1,3 +1,3 @@
-This is app provides basic twitter functionality.
+Objectives: build a twitter clone app including user account management
 
 Technologies: Sinatra, Postgresql, Haml, CSS, Javascript, AJAX
