@@ -10,4 +10,9 @@ class ChitterApp < Sinatra::Base
   set :public_folder, File.join(File.dirname(__FILE__), '..', 'public')
   set :partial_template_engine, :haml
 
+  set :app_id, ENV['API_ID']
+  set :secret, ENV['API_SECRET']
+  set :key, ENV['API_KEY']
+
+
 end

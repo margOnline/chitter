@@ -4,7 +4,6 @@ require 'haml'
 require 'rack-flash'
 require 'sinatra/partial'
 require 'pusher'
-
 ######### MODELS / CONTROLLERS #########
 require './app/models/maker'
 require './app/models/peep'
@@ -26,14 +25,8 @@ class Chitter < Sinatra::Base
   set :views, File.join(File.dirname(__FILE__), '..', 'views')
   set :public_folder, File.join(File.dirname(__FILE__), '..', 'public')
   set :partial_template_engine, :haml
-  set :api_id, ENV['API_ID']
-  set :api_secret, ENV['API_SECRET']
-  set :api_key, ENV['API_KEY']
-######### DEFINE ROUTE PATHS #########
 
-  before do
-    @pusher_key = "api_key"
-  end
+######### DEFINE ROUTE PATHS #########
   
   get('/') {Home.call(env)}
   get('/sessions/new') {Sessions.call(env)}
