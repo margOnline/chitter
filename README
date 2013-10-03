@@ -1,3 +1,5 @@
-Objectives: build a twitter clone app including user account management
+Objectives: build a twitter like app including user account management
 
 Technologies: Sinatra, Postgresql, Haml, CSS, Javascript, AJAX
+
+Updates: 3 Oct 2013 - added pusher gem for real time cheep updates
