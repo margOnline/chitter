@@ -1,14 +1,19 @@
-function handlePeepSubmit(){
+function handlePeepSubmit(e){
   var form = $(this);
   var data = {
     "post": form.find('#post').val()
   };
   $.post('/peeps', data, function(){});
-  return false;
+  e.preventDefault();
+  clearForm();
 }
 
 function postSuccess(data,textStatus, jqXHR){
   $('#peeps').prepend(data);
+}
+
+function clearForm(){
+  $('#post').val('');
 }
 
 var pusher = new Pusher('64f9dd5db97a8ce00355');
