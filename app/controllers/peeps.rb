@@ -1,7 +1,7 @@
 class Peeps < ChitterApp
-  Pusher.app_id = '55593'
-  Pusher.key = '64f9dd5db97a8ce00355'
-  Pusher.secret = 'f497b9469b0ab0e0c29d'
+  Pusher.app_id = APP_ID
+  Pusher.key = APP_KEY
+  Pusher.secret = APP_SECRET
 
   get '/peeps/new' do
     haml :"peeps/new"
@@ -13,6 +13,9 @@ class Peeps < ChitterApp
     maker_id = session[:maker_id]
     
     peep = Peep.create(:post => post, :created_at => created_at, :maker_id => maker_id)
-    Pusher.trigger('peeps', 'add-peep', {"post" => peep.post})
+    created_at = peep.created_at.strftime('%e %b %R')
+    Pusher.trigger('peeps', 'add-peep', {"post" => peep.post, "peep_maker" => peep.maker, "created_at" => created_at})
   end
 end
+
+

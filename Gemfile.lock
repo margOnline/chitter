@@ -91,12 +91,19 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
+    localtunnel (0.3)
+      json (>= 1.2.4)
+      net-ssh (>= 2.0.22)
+      net-ssh-gateway (>= 1.0.1)
     lumberjack (1.0.4)
     method_source (0.8.2)
     mime-types (1.25)
     mini_portile (0.5.1)
     multi_json (1.8.0)
     multi_test (0.0.2)
+    net-ssh (2.7.0)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     pry (0.9.12.2)
@@ -162,6 +169,7 @@ DEPENDENCIES
   dm-postgres-adapter
   guard
   haml
+  localtunnel
   pusher
   rack-flash3
   rspec
