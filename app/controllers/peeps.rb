@@ -1,7 +1,7 @@
 class Peeps < ChitterApp
-  Pusher.app_id = :app_id
-  Pusher.key = :app_key
-  Pusher.secret = :app_secret
+  Pusher.app_id = settings.app_id
+  Pusher.key = settings.app_key
+  Pusher.secret = settings.app_secret
 
   get '/peeps/new' do
     haml :"peeps/new"
