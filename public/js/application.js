@@ -19,3 +19,4 @@ channel.bind('add-peep', function(peep) {
     peep.peep_maker.username + "</span><span class='created'>" + peep.created_at + "</span><p class='post'>" + 
     peep.post +"</p></li>"); 
 });
+
