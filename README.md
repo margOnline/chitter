@@ -9,6 +9,7 @@ Super Chitter was created in 2 days as part of an exam to build an app using Sin
 </ul>
 <h4>Technical Configuration</h4>
 <ul>
+<li>Languages: Ruby, Haml, CSS, Javascript, AJAX</li>
 <li>Database - PosgreSQL</li>
 <li>Gems
   <ul>
@@ -19,12 +20,9 @@ Super Chitter was created in 2 days as part of an exam to build an app using Sin
 </ul>
 <h4>Contributors</h4>
 <ul>
-<li><a href="https://github.com/ecomba">Enrique Comba Riepenhausen</a></li>
+<li><a href="https://github.com/ecomba">Enrique Comba Riepenhausen</a>
+</li>
 </ul
-
-<h4>Technologies</h4>
-Sinatra, Postgresql, Haml, CSS, Javascript, AJAX
-
 <h4>Next Steps</h4>
 Build functionality to allow users to comment on individual cheeps.
 <h4>Updates</h4><ul><li> 3 Oct 2013 - added pusher gem for real time cheep updates</li>
