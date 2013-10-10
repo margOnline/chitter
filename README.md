@@ -13,10 +13,19 @@ Super Chitter was created in 2 days as part of an exam to build an app using Sin
 <li>Database - PosgreSQL</li>
 <li>Gems
   <ul>
-  <li>Pusher</li>
-  <li>Rspec-rails</li>
-  <li>Capybara</li>
-  <li>Haml</li>
+  <li>pusher</li>
+  <li>sinatra</li>
+  <li>dm-postgres-adapter</li>
+  <li>capybara</li>
+  <li>haml</li>
+  <li>sinatra-partial</li>
+  <li>rack-flash3</li>
+  <li>bcrypt-ruby</li>
+  <li>database_cleaner</li>
+  <li>localtunnel</li>
+  <li>shotgun<li>
+  <li>cucumber</li>
+  <li>cucumber-sinatra<li>
 </ul>
 <h4>Contributors</h4>
 <ul>
