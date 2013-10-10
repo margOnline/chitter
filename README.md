@@ -22,7 +22,7 @@ Super Chitter was created in 2 days as part of an exam to build an app using Sin
 <ul>
 <li><a href="https://github.com/ecomba">Enrique Comba Riepenhausen</a>
 </li>
-</ul
+</ul>
 <h4>Next Steps</h4>
 Build functionality to allow users to comment on individual cheeps.
 <h4>Updates</h4><ul><li> 3 Oct 2013 - added pusher gem for real time cheep updates</li>
