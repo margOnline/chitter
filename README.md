@@ -23,9 +23,9 @@ Super Chitter was created in 2 days as part of an exam to build an app using Sin
   <li>bcrypt-ruby</li>
   <li>database_cleaner</li>
   <li>localtunnel</li>
-  <li>shotgun<li>
+  <li>shotgun</li>
   <li>cucumber</li>
-  <li>cucumber-sinatra<li>
+  <li>cucumber-sinatra</li>
 </ul>
 <h4>Contributors</h4>
 <ul>
