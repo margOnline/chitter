@@ -27,6 +27,9 @@ Super Chitter was created in 2 days as part of an exam to build an app using Sin
   <li>cucumber</li>
   <li>cucumber-sinatra</li>
 </ul>
+<h4>Demo</h4>
+You can view and test the application here:
+<p><a href="http://super-chitter.herokuapp.com/">http://super-chitter.herokuapp.com/</a></p>
 <h4>Contributors</h4>
 <ul>
 <li><a href="https://github.com/ecomba">Enrique Comba Riepenhausen</a>
